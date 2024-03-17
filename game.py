@@ -17,6 +17,8 @@ hero_image.set_colorkey((0,0,0))
 ticks=60
 x=100
 X=0
+y=700
+Y=0
 while True:
     for event in pygame.event.get():
         print(event)
@@ -25,14 +27,27 @@ while True:
         X += 0.3
     if pressed[pygame.K_LEFT]:
         X -= 0.3
+    if pressed[pygame.K_UP]:
+        Y -= 0.3
+    if pressed[pygame.K_DOWN]:
+        Y += 0.3
+    if y > 752:
+        Y = -2
+    if y < 10:
+        Y = 2
+    if x > 1010:
+        X = -2
+    if x < 15:
+        X = 2
     if pressed[pygame.K_ESCAPE]:
         break
     screen.fill((255,100,0))
     x += X
-    pygame.draw.rect(screen, (0,0,0), pygame.Rect(x, 230, 60, 60))
+    y += Y
+    # pygame.draw.rect(screen, (0,0,0), pygame.Rect(x, 760, 60, 60))
     #rotated = pygame.transform.rotate(car_image, car.angle)
     rect = hero_image.get_rect()
-    screen.blit(hero_image, (x, 30))
+    screen.blit(hero_image, (x, y))
     pygame.display.flip()
     clock.tick(ticks)
 
