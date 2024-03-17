@@ -41,10 +41,23 @@ while True:
         X = 2
     if pressed[pygame.K_ESCAPE]:
         break
-    screen.fill((255,100,0))
+    screen.fill((0,0,25))
     x += X
     y += Y
-    # pygame.draw.rect(screen, (0,0,0), pygame.Rect(x, 760, 60, 60))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(100, 200, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(165, 335, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(195, 375, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(275, 400, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(333, 515, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(345, 580, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(470, 600, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(500, 300, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(480, 275, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(400, 210, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(800, 600, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(775, 565, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(100, 200, 5, 5))
+    pygame.draw.rect(screen, (255,255,255), pygame.Rect(100, 200, 5, 5))
     #rotated = pygame.transform.rotate(car_image, car.angle)
     rect = hero_image.get_rect()
     screen.blit(hero_image, (x, y))
