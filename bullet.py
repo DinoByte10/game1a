@@ -11,10 +11,8 @@ class Bullet(pygame.sprite.Sprite):
         self.color = (255,0,0)
         self.image.fill(self.color)
         self.rect = self.image.get_rect()
-        self.vel_x = 0
-        self.vel_y = -5
+        self.my = -7
 
     def update(self):
-        self.bullets.update()
-        self.rect.x += self.vel_x
-        self.rect.y += self.vel_x
+        self.rect.y += self.my
+        print(self.rect.y)
