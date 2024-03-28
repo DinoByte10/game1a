@@ -9,7 +9,7 @@ from hero import hero_image
 
 pygame.init()
 pygame.display.set_caption("My game")
-screen=pygame.display.set_mode((1024, 768))
+screen=pygame.display.set_mode((800, 1000))
 clock=pygame.time.Clock()
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -17,7 +17,7 @@ image_path = os.path.join(current_dir, "hero1.pcx")
 
 screen.set_colorkey((0,0,0))
 
-player = hero_image(image_path, 100, 700, 0, 0)
+player = hero_image(image_path, 100, 910, 0, 0)
 
 ticks=60
 

@@ -13,7 +13,7 @@ class hero_image(pygame.sprite.Sprite):
     def update(self):
         self.x += self.mx
         self.y += self.my
-        if self.x > 1010:
+        if self.x > 760:
             self.mx = -0.3
         if self.x < 15:
             self.mx = 0.3
