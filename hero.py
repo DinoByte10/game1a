@@ -10,7 +10,16 @@ class hero_image(pygame.sprite.Sprite):
         self.mx = mx
         self.my = my
         self.bullets = []
+        self.dead = False
+        self.win = False
+        self.over = False
+        self.complete = False
+        self.rect = self.image.get_rect()
     def update(self):
+        if self.dead:
+            self.my = 5
+        if self.win:
+            self.my = -10
         self.x += self.mx
         self.y += self.my
         if self.x > 760:
@@ -19,12 +28,21 @@ class hero_image(pygame.sprite.Sprite):
             self.mx = 0.3
         for b in self.bullets:
             b.update()
+            if b.rect.y < 0:
+                self.bullets.remove(b)
+        if self.y > 1100:
+            self.over = True
+        if self.y < 0:
+            self.complete = True
     def right(self):
         self.mx += 0.1
     def left(self):
         self.mx -= 0.1
     def shoot(self):
+        if len(self.bullets) > 3:
+            return
         new_bullet = Bullet()
-        new_bullet.rect.x = self.x
+        new_bullet.rect.x = -5 //2 + self.x + self.image.get_width() //2
         new_bullet.rect.y = self.y
         self.bullets.append(new_bullet)
+    
