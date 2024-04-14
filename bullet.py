@@ -15,6 +15,5 @@ class Bullet(pygame.sprite.Sprite):
 
     def update(self):
         self.rect.y += self.my
-        print(self.rect.y)
 
     

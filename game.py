@@ -14,7 +14,6 @@ from bg import BG
 g = Gamec()
 g.play()
 
-bg = BG
 
 print("Game Over!")
 

@@ -39,7 +39,7 @@ class hero_image(pygame.sprite.Sprite):
     def left(self):
         self.mx -= 0.1
     def shoot(self):
-        if len(self.bullets) > 3:
+        if len(self.bullets) > 3 or self.dead or self.over:
             return
         new_bullet = Bullet()
         new_bullet.rect.x = -5 //2 + self.x + self.image.get_width() //2
