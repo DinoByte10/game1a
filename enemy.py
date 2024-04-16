@@ -31,6 +31,10 @@ class Enemy(pygame.sprite.Sprite):
             self.rect.x = 0
         elif self.rect.x < 0:
             self.rect.x = 800
+        if self.mx < 0:
+            self.my = 6
+        if self.mx > 0:
+            self.my = 6
 
                 
 

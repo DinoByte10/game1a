@@ -55,7 +55,7 @@ class Gamec():
                         self.score += 10 * self.level
                         self.enemies.remove(e)
                         self.player.bullets.remove(b)
-                if self.player.x > e.rect.x - 13 and self.player.x < e.rect.x + 36 and self.player.y > e.rect.y - 13 and self.player.y < e.rect.y + 36:
+                if self.player.x > e.rect.x - 23 and self.player.x < e.rect.x + 26 and self.player.y > e.rect.y - 23 and self.player.y < e.rect.y + 26:
                     # self.enemies.remove(e)
                     self.player.dead = True
     def play(self):
