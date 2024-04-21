@@ -16,7 +16,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x 
         self.rect.y= -100 - y
-        self.my = 3
+        self.my = random.randrange(2, 5)
         self.mx = 0
         self.firsty = y
     def update(self):
@@ -32,10 +32,9 @@ class Enemy(pygame.sprite.Sprite):
         elif self.rect.x < 0:
             self.rect.x = 800
         if self.mx < 0:
-            self.my = 6
+            self.my = random.randrange(6, 9)
         if self.mx > 0:
-            self.my = 6
-
+            self.my = random.randrange(6, 9)
                 
 
 
